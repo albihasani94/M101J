@@ -1,0 +1,30 @@
+Microsoft Windows [Version 10.0.15063]
+(c) 2017 Microsoft Corporation. All rights reserved.
+
+C:\Users\ahasani>mongo
+MongoDB shell version: 3.2.17-17-gff8486c
+connecting to: test
+Welcome to the MongoDB shell.
+For interactive help, type "help".
+For more comprehensive documentation, see
+        http://docs.mongodb.org/
+Questions? Try the support group
+        http://groups.google.com/group/mongodb-user
+> show dbs
+local  0.000GB
+m101   0.000GB
+> use m101
+switched to db m101
+> show collections
+funnynumbers
+hw1
+> m101.hw1.findOne()
+2017-10-23T23:37:42.048+0200 E QUERY    [thread1] ReferenceError: m101 is not defined :
+@(shell):1:1
+
+> db.hw1.findOne();
+{
+        "_id" : ObjectId("50773061bf44c220307d8514"),
+        "answer" : 42,
+        "question" : "The Ultimate Question of Life, The Universe and Everything"
+}
