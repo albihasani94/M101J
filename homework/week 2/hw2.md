@@ -1,10 +1,10 @@
-# 2.2 What is the student_id of the lowest exam score above 65?
+### H3 2.2 What is the student_id of the lowest exam score above 65?
 
 ```sql
 db.grades.find( {score: {$gte : 65} } ).sort( {score:1})
 ```
 
-# 2.3 Provide the identity of the student with the highest average in the class using the aggregation framework.
+### H3 2.3 Provide the identity of the student with the highest average in the class using the aggregation framework.
 
 ```sql
 db.grades.aggregate( 
@@ -15,13 +15,13 @@ db.grades.aggregate(
 )
 ```
 
-# 2.5 Which of the choices below is the title of a movie from the year 2013 that is rated PG-13 and won no awards? 
+### H3 2.5 Which of the choices below is the title of a movie from the year 2013 that is rated PG-13 and won no awards? 
 
 ```sql
 db.movieDetails.find( { $and: [{"year":2013}, {"rated":"PG-13"}, {"awards.wins":0}] }).pretty()
 ```
 
-# 2.6 Using the video.movieDetails collection, how many movies list "Sweden" second in the the list of countries.
+### H3 2.6 Using the video.movieDetails collection, how many movies list "Sweden" second in the the list of countries.
 
 ```sql
 db.movieDetails.find( { "countries.1" : "Sweden" } ).count()
