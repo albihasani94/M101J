@@ -6,7 +6,7 @@ import org.bson.types.ObjectId;
 import java.util.Arrays;
 import java.util.Date;
 
-import static util.Helpers.printJson;
+import static com.mongodb.util.Helpers.printJson;
 
 public class DocumentTest {
     public static void main(String[] args) {
