@@ -1,4 +1,4 @@
-package crud;
+package com.mongodb.crud;
 
 import org.bson.Document;
 import org.bson.types.ObjectId;

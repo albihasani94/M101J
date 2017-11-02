@@ -1,4 +1,4 @@
-package crud;
+package com.mongodb.crud;
 
 import com.mongodb.MongoClient;
 import com.mongodb.client.MongoCollection;
