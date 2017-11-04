@@ -5,13 +5,11 @@ import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import org.bson.Document;
 
+import static com.mongodb.util.Helpers.getDocumentMongoCollection;
+
 public class InsertTest {
     public static void main(String[] args) {
-        MongoClient client = new MongoClient();
-        MongoDatabase db = client.getDatabase("course");
-        MongoCollection<Document> coll = db.getCollection("insertTest");
-
-        coll.drop();
+        MongoCollection<Document> coll = getDocumentMongoCollection();
 
         Document aqif = new Document("name", "Aqif")
                 .append("age", 30)

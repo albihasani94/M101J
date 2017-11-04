@@ -1,20 +1,17 @@
 package com.mongodb.crud;
 
-import com.mongodb.MongoClient;
 import com.mongodb.client.MongoCollection;
-import com.mongodb.client.MongoDatabase;
 import org.bson.Document;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.mongodb.util.Helpers.getDocumentMongoCollection;
 import static com.mongodb.util.Helpers.jsonToString;
 
 public class FindTest {
     public static void main(String[] args) {
-        MongoClient client = new MongoClient();
-        MongoDatabase database = client.getDatabase("course");
-        MongoCollection<Document> collection = database.getCollection("insertTest");
+        MongoCollection<Document> collection = getDocumentMongoCollection();
 
        // System.out.println(collection.find().first());
 

@@ -1,5 +1,8 @@
 package com.mongodb.util;
 
+import com.mongodb.MongoClient;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
 import org.bson.Document;
 import org.bson.codecs.DocumentCodec;
 import org.bson.codecs.EncoderContext;
@@ -35,5 +38,11 @@ public class Helpers {
             System.out.println(jsonWriter.getWriter());
             System.out.flush();
         };
+    }
+
+    public static MongoCollection<Document> getDocumentMongoCollection() {
+        MongoClient client = new MongoClient();
+        MongoDatabase database = client.getDatabase("course");
+        return database.getCollection("insertTest");
     }
 }
