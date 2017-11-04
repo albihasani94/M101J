@@ -40,9 +40,9 @@ public class Helpers {
         };
     }
 
-    public static MongoCollection<Document> getDocumentMongoCollection() {
+    public static MongoCollection<Document> getDocumentMongoCollection(String collection) {
         MongoClient client = new MongoClient();
         MongoDatabase database = client.getDatabase("course");
-        return database.getCollection("insertTest");
+        return database.getCollection(collection);
     }
 }

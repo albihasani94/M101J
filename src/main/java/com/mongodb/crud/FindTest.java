@@ -11,7 +11,7 @@ import static com.mongodb.util.Helpers.jsonToString;
 
 public class FindTest {
     public static void main(String[] args) {
-        MongoCollection<Document> collection = getDocumentMongoCollection();
+        MongoCollection<Document> collection = getDocumentMongoCollection("insertTest");
 
        // System.out.println(collection.find().first());
 

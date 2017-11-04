@@ -13,7 +13,7 @@ import static com.mongodb.util.Helpers.jsonToString;
 
 public class FindWithSortSkipLimitTest {
     public static void main(String[] args) {
-        MongoCollection<Document> collection = getDocumentMongoCollection();
+        MongoCollection<Document> collection = getDocumentMongoCollection("insertTest");
 
         Bson sort = ascending("age");
 
